@@ -32,13 +32,19 @@ else
 name_error.innerHTML = "";
 }
 
-if(!email.value.match(email_check))
+
+    if(email.value === '' || email.value == null)
 {
 e.preventDefault();
-email_error.innerHTML = "Valid Email is required";
+email_error.innerHTML = " Email is required";
 
 }
-
+else if(!email.value.match(email_check))
+{
+    e.preventDefault();
+    email_error.innerHTML = "Valid Email is required";
+    
+    }
 
 else
 {
